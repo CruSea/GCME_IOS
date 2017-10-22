@@ -1,0 +1,40 @@
+//
+//  Post.swift
+//  devslopes-social
+//
+//  Created by Jess Rascal on 25/07/2016.
+//  Copyright © 2016 JustOneJess. All rights reserved.
+//
+
+import Foundation
+import Firebase
+
+
+
+struct User {
+    
+    var newsTitle: String!
+
+    var newsDetail: String!
+
+    var photoURL: String!
+    var ref: DatabaseReference?
+    var key: String?
+    
+    init(snapshot: DataSnapshot){
+        
+        key = snapshot.key
+        ref = snapshot.ref
+        newsTitle = (snapshot.value! as! NSDictionary)["titlenews"] as! String
+        newsDetail = (snapshot.value! as! NSDictionary)["detailnews"] as! String
+       
+        photoURL = (snapshot.value! as! NSDictionary)["imagenews"] as! String
+        
+    }
+    
+    
+    //    func toAnyObject() -> [String: Any] {
+    //        return ["email"]
+    //    }
+    
+}
