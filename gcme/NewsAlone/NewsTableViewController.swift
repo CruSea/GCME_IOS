@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
@@ -98,24 +99,28 @@ class NewsTableViewController: UITableViewController {
         cell.newsDetail.text = newsArray[indexPath.row].summary
         cell.newsTitle.text = newsArray[indexPath.row].title
         
-        let imageURL = newsArray[indexPath.row].photoURL!
         
-        cell.storageRef.reference(forURL: imageURL).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
-            
-            if error == nil {
-                DispatchQueue.main.async {
-                    if let data = imgData {
-                        cell.newsImage.image = UIImage(data: data)
-                    }
-                }
-                
-            }else {
-                print(error!.localizedDescription)
-                
-            }
-            
-            
-        })
+        cell.newsImage.sd_setImage(with: URL(string: newsArray[indexPath.row].photoURL!), placeholderImage: #imageLiteral(resourceName: "logogcme"))
+
+        
+//        let imageURL = newsArray[indexPath.row].photoURL!
+//
+//        cell.storageRef.reference(forURL: imageURL).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
+//
+//            if error == nil {
+//                DispatchQueue.main.async {
+//                    if let data = imgData {
+//                        cell.newsImage.image = UIImage(data: data)
+//                    }
+//                }
+//
+//            }else {
+//                print(error!.localizedDescription)
+//
+//            }
+//
+//
+//        })
         
         
         

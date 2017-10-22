@@ -793,7 +793,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="281" id="fQM-1d-Ozk"/>
                                         </constraints>
-                                        <mutableString key="text">Great Commission Ministry Ethiopia is an interdenominational ministry committed to helping take the gospel of Jesus Christ to the people of Ethiopia. We cooperate with all born again Christians from churches of many denominations and hundreds of other Christian organizations in Ethiopia to help Christians grow in their faith and share the Gospel message with their villagers. Working together with these fellow believers, our goal for this decade is to help give every man, woman, and child in the entire world an opportunity to find new life in Jesus Christ. Our commitment is based on our Lord’s command:</mutableString>
+                                        <string key="text">Great Commission Ministry Ethiopia is an interdenominational ministry committed to helping take the gospel of Jesus Christ to the people of Ethiopia. We cooperate with all born again Christians from churches of many denominations and hundreds of other Christian organizations in Ethiopia to help Christians grow in their faith and share the Gospel message with their villagers. Working together with these fellow believers, our goal for this decade is to help give every man, woman, and child in the entire world an opportunity to find new life in Jesus Christ. Our commitment is based on our Lord’s command:</string>
                                         <color key="textColor" red="0.18406379219999999" green="0.25938785079999999" blue="0.41470211740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -804,7 +804,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="204" id="AfI-NX-4Qr"/>
                                         </constraints>
-                                        <mutableString key="text">“All authority has been given to Me in heaven and on earth. Go therefore and make disciples of all the nations, baptizing them in the name of the Father and the Son and the Holy Spirit, teaching them to observe all that I commanded you: and lo, I am with you always, even to the end of the age.” Matthew 28:18-20</mutableString>
+                                        <string key="text">“All authority has been given to Me in heaven and on earth. Go therefore and make disciples of all the nations, baptizing them in the name of the Father and the Son and the Holy Spirit, teaching them to observe all that I commanded you: and lo, I am with you always, even to the end of the age.” Matthew 28:18-20</string>
                                         <color key="textColor" red="0.18406379219999999" green="0.25938785079999999" blue="0.41470211740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

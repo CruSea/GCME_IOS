@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 import FirebaseDatabase
 import Firebase
 import FirebaseStorage
@@ -254,24 +255,25 @@ class HomeViewController: UIViewController,UICollectionViewDataSource, UICollect
         //        cell.titlenews.text = usersArray[indexPath.row].title
         //        cell.pubdatenews.text = usersArray[indexPath.row].pubdate!
         //
-        let imageURL = usersArray[indexPath.row].photoURL!
-        
-        cell.storageRef.reference(forURL: imageURL).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
-            
-            if error == nil {
-                DispatchQueue.main.async {
-                    if let data = imgData {
-                        cell.image.image = UIImage(data: data)
-                    }
-                }
-                
-            }else {
-                print(error!.localizedDescription)
-                
-            }
-            
-            
-        })
+        cell.image.sd_setImage(with: URL(string: usersArray[indexPath.row].photoURL!), placeholderImage: #imageLiteral(resourceName: "logogcme"))
+//        let imageURL = usersArray[indexPath.row].photoURL!
+//
+//        cell.storageRef.reference(forURL: imageURL).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
+//
+//            if error == nil {
+//                DispatchQueue.main.async {
+//                    if let data = imgData {
+//                        cell.image.image = UIImage(data: data)
+//                    }
+//                }
+//
+//            }else {
+//                print(error!.localizedDescription)
+//
+//            }
+//
+//
+//        })
         
         return cell
 
@@ -284,24 +286,26 @@ class HomeViewController: UIViewController,UICollectionViewDataSource, UICollect
             //        cell.titlenews.text = usersArray[indexPath.row].title
             //        cell.pubdatenews.text = usersArray[indexPath.row].pubdate!
             //
-            let testImage = testArray[indexPath.row].imageURLTest!
-            
-            cell2.storageRef.reference(forURL: testImage).getData(maxSize: 15 * 1024 * 1024, completion: { (imgDataTest, error) in
-                
-                if error == nil {
-                    DispatchQueue.main.async {
-                        if let data = imgDataTest {
-                            cell2.imageTest.image = UIImage(data: data)
-                        }
-                    }
-                    
-                }else {
-                    print(error!.localizedDescription)
-                    
-                }
-                
-                
-            })
+       //     let testImage = testArray[indexPath.row].imageURLTest!
+        
+            cell2.imageTest.sd_setImage(with: URL(string: testArray[indexPath.row].imageURLTest!), placeholderImage: #imageLiteral(resourceName: "logogcme"))
+        
+//            cell2.storageRef.reference(forURL: testImage).getData(maxSize: 15 * 1024 * 1024, completion: { (imgDataTest, error) in
+//                
+//                if error == nil {
+//                    DispatchQueue.main.async {
+//                        if let data = imgDataTest {
+//                            cell2.imageTest.image = UIImage(data: data)
+//                        }
+//                    }
+//                    
+//                }else {
+//                    print(error!.localizedDescription)
+//                    
+//                }
+//                
+//                
+//            })
         
             return cell2
 

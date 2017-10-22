@@ -12,6 +12,7 @@ target 'gcme' do
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'YouTubePlayer-Swift', '~> 1.0'
+  pod 'SDWebImage', '~> 4.0'
 use_frameworks! 
 
 end

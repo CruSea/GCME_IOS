@@ -63,6 +63,9 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.4.0)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
   - YouTubePlayer-Swift (1.0)
 
 DEPENDENCIES:
@@ -72,6 +75,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - SDWebImage (~> 4.0)
   - YouTubePlayer-Swift (~> 1.0)
 
 SPEC CHECKSUMS:
@@ -88,8 +92,9 @@ SPEC CHECKSUMS:
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: 5919fb6bde9e98fc83e7951d8785bf065e983f93
+PODFILE CHECKSUM: 5d4d22bd04beb86cd499a22a9a3a9f27df6f3c35
 
 COCOAPODS: 1.3.1

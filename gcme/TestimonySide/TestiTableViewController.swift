@@ -43,7 +43,7 @@ class TestiTableViewController: UITableViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
         }
-        print(testiArray)
+     //   print(testiArray)
 //        
 //        let nav = self.navigationController?.navigationBar
 //        nav?.barStyle = UIBarStyle.black
@@ -99,25 +99,26 @@ class TestiTableViewController: UITableViewController {
         cell.testiTitle.text = testiArray[indexPath.row].testimonyTitle
         cell.testiDetail.text = testiArray[indexPath.row].testimonyDetail
        
-        
-        let testimonyImageUrl = testiArray[indexPath.row].testimonyImages!
-        
-        cell.storageRef.reference(forURL: testimonyImageUrl).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
-            
-            if error == nil {
-                DispatchQueue.main.async {
-                    if let data = imgData {
-                        cell.imageTesti.image = UIImage(data: data)
-                    }
-                }
-                
-            }else {
-                print(error!.localizedDescription)
-                
-            }
-            
-            
-        })
+        cell.imageTesti.sd_setImage(with: URL(string: testiArray[indexPath.row].testimonyImages!), placeholderImage: #imageLiteral(resourceName: "logogcme"))
+
+//        let testimonyImageUrl = testiArray[indexPath.row].testimonyImages!
+//        
+//        cell.storageRef.reference(forURL: testimonyImageUrl).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
+//            
+//            if error == nil {
+//                DispatchQueue.main.async {
+//                    if let data = imgData {
+//                        cell.imageTesti.image = UIImage(data: data)
+//                    }
+//                }
+//                
+//            }else {
+//                print(error!.localizedDescription)
+//                
+//            }
+//            
+//            
+//        })
         
         return cell
     }

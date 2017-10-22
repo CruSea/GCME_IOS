@@ -78,24 +78,26 @@ class DevotionTableViewController: UITableViewController {
         cell.devoDetail.text = devotionalArray[indexPath.row].devoSummary
         cell.devoTItle.text = devotionalArray[indexPath.row].devoTitle
         
-                let imageURL = devotionalArray[indexPath.row].devoPhotoURL!
+        cell.devoImage.sd_setImage(with: URL(string: devotionalArray[indexPath.row].devoPhotoURL!), placeholderImage: #imageLiteral(resourceName: "logogcme"))
         
-                cell.storageRef.reference(forURL: imageURL).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
-        
-                    if error == nil {
-                        DispatchQueue.main.async {
-                            if let data = imgData {
-                                cell.devoImage.image = UIImage(data: data)
-                            }
-                        }
-        
-                    }else {
-                        print(error!.localizedDescription)
-        
-                    }
-        
-        
-                })
+//        let imageURL = devotionalArray[indexPath.row].devoPhotoURL!
+//        
+//        cell.storageRef.reference(forURL: imageURL).getData(maxSize: 15 * 1024 * 1024, completion: { (imgData, error) in
+//            
+//            if error == nil {
+//                DispatchQueue.main.async {
+//                    if let data = imgData {
+//                        cell.devoImage.image = UIImage(data: data)
+//                    }
+//                }
+//                
+//            }else {
+//                print(error!.localizedDescription)
+//                
+//            }
+//            
+//            
+//        })
         
         return cell
     }
