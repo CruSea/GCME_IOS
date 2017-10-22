@@ -209,7 +209,6 @@ class HomeViewController: UIViewController,UICollectionViewDataSource, UICollect
                 let user = Testimony(snapshot: user as! DataSnapshot)
                 
                 fetchedTestimonies.append(user)
-                print(fetchedTestimonies)
 
                 
             }
@@ -232,12 +231,12 @@ class HomeViewController: UIViewController,UICollectionViewDataSource, UICollect
         
         if(collectionView == collectionView1)
         {
-            return 1
+            return usersArray.count
             //return cell for collection1
         }
         else
         {
-            return 1
+            return testArray.count
 
             //return cell for collection2
         }
